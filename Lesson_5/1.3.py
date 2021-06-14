@@ -5,7 +5,7 @@ task3
 Выполнить подсчет средней величины дохода сотрудников.
 '''
 
-with open('task3.txt', 'r') as file_3:
+with open('task3.txt', 'r', encoding='utf-8') as file_3:
     salary = []
     less_than_20k_salary = []
     list_3 = file_3.read().split('\n')
