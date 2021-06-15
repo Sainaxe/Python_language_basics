@@ -12,3 +12,11 @@ task6
 Пример словаря:
 {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 '''
+
+import re
+
+sum_of_hours = {}
+with open("task6.txt", encoding="utf-8") as task_6:
+    for line in task_6.readlines():
+        sum_of_hours[re.findall(r"^\w+", line)[0]] = sum(map(int, re.findall(r"\d+", line)))
+    print(f"SUMMARY: {sum_of_hours}")

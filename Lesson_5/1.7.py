@@ -14,3 +14,22 @@ task7
 
 Подсказка: использовать менеджеры контекста.
 '''
+
+import json
+
+per = dict()
+average_profit = 0
+num = 0
+with open("task7.txt", encoding="utf-8") as task_7:
+    for line in task_7:
+        name_of_the_organization, type_of_ownership, income, cost = line.split()
+        profit = int(income) - int(cost)
+        if profit >= 0:
+            average_profit += profit
+            num += 1
+        per[name_of_the_organization] = profit
+    print(f"Summary profit: {average_profit}")
+average_profit /= num
+print(f"Average profit (only for profitable companies): {average_profit}")
+with open("task7.json", "w", encoding="utf-8") as task_7:
+    json.dump([per, {"average_profit": average_profit}], task_7, ensure_ascii=False)
