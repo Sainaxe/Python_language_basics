@@ -7,3 +7,15 @@ task4
 Первый — возведение в степень с помощью оператора **.
 Второй — более сложная реализация без оператора **, предусматривающая использование цикла.
 '''
+
+def power(a, n):
+    res = 1
+    for i in range(abs(n)):
+        res *= a
+    if n >= 0:
+        return res
+    else:
+        return 1 / res
+
+
+print(power(float(input("Enter the number raised to a degree: ")), int(input("Enter degree: "))))

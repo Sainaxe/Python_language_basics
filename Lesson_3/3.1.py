@@ -6,7 +6,7 @@ task1
 
 # x, y = (int(input("Enter x, y (numerator / denominator): ")) for _ in range (2))
 # x, y = (int(input()) for _ in range(2))
-x, y = (int(i) for i in input("Enter x, y (numerator / denominator): ").split())
+x, y = (int(i) for i in input("Enter x, y through a space (numerator / denominator): ").split())
 if y != 0:
     def arg(x, y):
         z = x / y
