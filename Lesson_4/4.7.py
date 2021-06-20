@@ -6,3 +6,19 @@ task7
 начиная с 1! и до n!.
 Подсказка: факториал числа n — произведение чисел от 1 до n. Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 '''
+
+from itertools import count
+from math import factorial
+
+def fibo_gen():
+    for el in count(1):
+        yield factorial(el)
+
+gen = fibo_gen()
+x = 0
+for i in gen:
+    if x < 15:
+        print(i)
+        x += 1
+    else:
+        break

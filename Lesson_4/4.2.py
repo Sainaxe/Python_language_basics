@@ -5,3 +5,11 @@ task2
 Пример исходного списка: [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55].
 Результат: [12, 44, 4, 10, 78, 123].
 '''
+
+from random import randint
+
+a = [randint(0, 300) for i in range(20)]
+print(f'First list: {a}')
+for i in range(1, len(a)):
+    if a[i] > a[i - 1]:
+        print(a[i])

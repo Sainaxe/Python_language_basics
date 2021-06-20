@@ -8,3 +8,13 @@ task6
 Например, в первом задании выводим целые числа, начиная с 3, а при достижении числа 10 завершаем цикл.
 Во втором также необходимо предусмотреть условие, при котором повторение элементов списка будет прекращено.
 '''
+
+from itertools import count
+from itertools import cycle
+
+for el in count(int(input('Введите стартовое число '))):
+    print(el)
+
+my_list = [True, 'ABC', 123, None]
+for el in cycle(my_list):
+    print(el)
